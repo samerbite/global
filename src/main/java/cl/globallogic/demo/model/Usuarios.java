@@ -11,7 +11,7 @@ import java.util.Calendar;
 
 @Entity
 @Table(name="usuarios")
-public class usuarios {
+public class Usuarios {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,7 +27,7 @@ public class usuarios {
     private String password;
     @JsonProperty("phones")
     @Embedded
-    private phones phones;
+    private Phones phones;
     @JsonProperty("creacion")
     @Column(updatable = false)
     @CreationTimestamp
@@ -39,15 +39,15 @@ public class usuarios {
     private String activo;
     private long serialVersionUID = -5290198995172316155L;
 
-    public usuarios (){
+    public Usuarios (){
         super();
     }
 
-    public usuarios (String name, String email, String password, String phones) {
+    public Usuarios (String name, String email, String password, String phones) {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.phones = new phones();
+        this.phones = new Phones();
     }
 
     @PrePersist
@@ -81,10 +81,10 @@ public class usuarios {
         this.password=password;
     }
 
-    public phones getPhones (){
+    public Phones getPhones (){
         return phones;
     }
-    public void setPhones(phones phones){
+    public void setPhones(Phones phones){
         this.phones=phones;
     }
 

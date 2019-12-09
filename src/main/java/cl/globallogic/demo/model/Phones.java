@@ -3,7 +3,7 @@ package cl.globallogic.demo.model;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class phones {
+public class Phones {
 
     private String number;
     private String citycode;
@@ -28,13 +28,13 @@ public class phones {
         this.contrycode = contrycode;
     }
 
-    public phones(String number, String citycode, String contrycode) {
+    public Phones(String number, String citycode, String contrycode) {
         super();
         this.number = number;
         this.citycode = citycode;
         this.contrycode = contrycode;
     }
-    public phones() {
+    public Phones() {
         super();
     }
 }

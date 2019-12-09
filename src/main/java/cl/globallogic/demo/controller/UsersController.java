@@ -1,7 +1,7 @@
 package cl.globallogic.demo.controller;
 
-import cl.globallogic.demo.model.usuarios;
-import cl.globallogic.demo.service.usuariosServiceImpl;
+import cl.globallogic.demo.model.Usuarios;
+import cl.globallogic.demo.service.UsuariosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-public class usersController {
+public class UsersController {
     @Autowired
-    usuariosServiceImpl Usuarios;
+    UsuariosService Usuarios;
 
 
     @PostMapping("/usuarios")
-    public ResponseEntity<usuarios> createUser(@Valid @RequestBody usuarios request) {
-        Usuarios.crearUsuarios(request);
+    public ResponseEntity<Usuarios> createUser(@Valid @RequestBody Usuarios request) {
+        Usuarios.crearUsuario(request);
         /*usuarios response = new usuarios();
         response.setId(request.getId());
         response.setCreacion(request.getCreacion());

@@ -8,7 +8,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/DemoApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/usersController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/Phones.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/Usuarios.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/phones.java">
           <value>
             <set />
           </value>
@@ -19,6 +44,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/repository/findUsuarios.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/repository/usuariosRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosServiceImpl.java">
           <value>
             <set />
           </value>
