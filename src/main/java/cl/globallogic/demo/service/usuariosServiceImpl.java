@@ -3,17 +3,12 @@ package cl.globallogic.demo.service;
 import cl.globallogic.demo.model.usuarios;
 import cl.globallogic.demo.repository.findUsuarios;
 import cl.globallogic.demo.repository.usuariosRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-
-import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.ignoreCase;
-
 @Service
+@Slf4j
 public class usuariosServiceImpl {
 
     @Autowired
@@ -22,12 +17,9 @@ public class usuariosServiceImpl {
     findUsuarios RespositoryFind;
 
     public void crearUsuarios (usuarios request){
-        boolean existe = RespositoryFind.existsById(request.getId());
-        if (existe == true) {
-            //TODO setear error
-        }else{
-            Repository.save(request);
-        }
+        usuarios existe = RespositoryFind.findByEmail(request.getEmail());
+        log.info("el valor de buscar e-mail es:", existe);
+        Repository.save(request);
 
     }
 }

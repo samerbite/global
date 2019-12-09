@@ -6,7 +6,9 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Pattern;
 import java.sql.Date;
+import java.util.Calendar;
 
 @Entity
 @Table(name="usuarios")
@@ -18,19 +20,22 @@ public class usuarios {
     @JsonProperty("name")
     private String name;
     @JsonProperty("email")
+    @Column(nullable = false, unique = true)
     @Email
     private String email;
     @JsonProperty("password")
+    @Pattern(regexp = "^(?=.*[0-9]{2})(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$")
     private String password;
     @JsonProperty("phones")
     @Embedded
     private phones phones;
     @JsonProperty("creacion")
+    @Column(updatable = false)
     @CreationTimestamp
-    private Date creacion;
+    private Calendar creacion;
     @CreationTimestamp
     @JsonProperty("modificado")
-    private Date modificado;
+    private Calendar modificado;
     @JsonProperty("activo")
     private String activo;
 
@@ -46,6 +51,11 @@ public class usuarios {
         this.email = email;
         this.password = password;
         this.phones = new phones();
+    }
+
+    @PrePersist
+    public void onPersist() {
+        creacion = Calendar.getInstance();
     }
 
     public Long getId(){
@@ -81,17 +91,17 @@ public class usuarios {
         this.phones=phones;
     }
 
-    public Date getCreacion (){
+    public Calendar getCreacion (){
         return creacion;
     }
-    public void setCreacion(Date creacion){
+    public void setCreacion(Calendar creacion){
         this.creacion=creacion;
     }
 
-    public Date getModificado (){
+    public Calendar getModificado (){
         return modificado;
     }
-    public void setModificado(Date modificado){
+    public void setModificado(Calendar modificado){
         this.modificado=modificado;
     }
 
