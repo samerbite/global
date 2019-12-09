@@ -7,7 +7,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
-import java.sql.Date;
 import java.util.Calendar;
 
 @Entity
@@ -38,9 +37,7 @@ public class usuarios {
     private Calendar modificado;
     @JsonProperty("activo")
     private String activo;
-
-
-    private static final long serialVersionUID = -5290198995172316155L;
+    private long serialVersionUID = -5290198995172316155L;
 
     public usuarios (){
         super();
@@ -129,5 +126,11 @@ public class usuarios {
     }
     public void setContrycode(String contrycode) {
         phones.setContrycode(contrycode);
+    }
+    public Long getSerialVersionUID () {
+        return serialVersionUID;
+    }
+    public void setSerialVersionUID (long serialVersionUID) {
+        this.serialVersionUID=serialVersionUID;
     }
 }

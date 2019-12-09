@@ -20,6 +20,11 @@ public class usersController {
     @PostMapping("/usuarios")
     public ResponseEntity<usuarios> createUser(@Valid @RequestBody usuarios request) {
         Usuarios.crearUsuarios(request);
+        /*usuarios response = new usuarios();
+        response.setId(request.getId());
+        response.setCreacion(request.getCreacion());
+        response.setModificado(request.getModificado());
+        response.setActivo(request.getActivo());*/
         return new ResponseEntity<>(request, HttpStatus.CREATED);
     }
 
