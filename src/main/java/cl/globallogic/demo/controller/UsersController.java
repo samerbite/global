@@ -18,7 +18,7 @@ import java.sql.SQLException;
 @RestController
 public class UsersController {
     @Autowired
-    UsuariosService Usuarios;
+    private UsuariosService Usuarios;
 
 
     @PostMapping("/usuarios")
