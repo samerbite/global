@@ -1,5 +1,6 @@
 package cl.globallogic.demo.service;
 
+import cl.globallogic.demo.exception.UsuariosServiceException;
 import cl.globallogic.demo.model.Usuarios;
 import cl.globallogic.demo.repository.UsuariosRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -15,7 +16,11 @@ public class UsuariosServiceImpl implements UsuariosService{
 
     @Override
     public Usuarios crearUsuario (Usuarios request){
-        return Repository.save(request);
-
+        try {
+            log.info("mensaje es:", request);
+            return Repository.save(request);
+        }catch (UsuariosServiceException e) {
+            throw new UsuariosServiceException("Correo ya esta registrado");
+        }
     }
 }

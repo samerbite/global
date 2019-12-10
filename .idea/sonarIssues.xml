@@ -23,12 +23,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosNotFound.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/Phones.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/Usuarios.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/UsuariosError.java">
           <value>
             <set />
           </value>
