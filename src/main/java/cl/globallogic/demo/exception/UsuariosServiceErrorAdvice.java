@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import javax.validation.ConstraintViolationException;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,17 +21,14 @@ import java.util.List;
 @ControllerAdvice
 @Slf4j
 public class UsuariosServiceErrorAdvice extends ResponseEntityExceptionHandler {
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler({UsuariosServiceException.class,
-            DataIntegrityViolationException.class,
-            SQLException.class,
-            NullPointerException.class,})
-    public final ResponseEntity<Object> handle(UsuariosServiceException ex) {
-        List<String> details = new ArrayList<>();
-        details.add(ex.getLocalizedMessage());
-        UsuariosError error = new UsuariosError ("correo ya utilizado", details);
-        return new ResponseEntity(error, HttpStatus.INTERNAL_SERVER_ERROR);
-    }
+
+   @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+   @ExceptionHandler({UsuariosServiceException.class,SQLException.class,NullPointerException.class,ConstraintViolationException.class,DataIntegrityViolationException.class})
+   public ResponseEntity <UsuariosError> handleService() {
+       UsuariosError response = new UsuariosError("correo ya utilizado");
+       return new ResponseEntity(response, HttpStatus.INTERNAL_SERVER_ERROR);
+   }
+
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({UsuariosValidationException.class})

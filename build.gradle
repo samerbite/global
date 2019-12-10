@@ -20,6 +20,8 @@ dependencies {
 	compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.4.9.Final'
 	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.9.Final'
 	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.10.1'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.1'
 	//compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.2.4'
 	compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.3.0-rc1'
 	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'

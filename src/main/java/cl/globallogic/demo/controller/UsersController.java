@@ -1,5 +1,6 @@
 package cl.globallogic.demo.controller;
 
+import cl.globallogic.demo.dto.UsuariosError;
 import cl.globallogic.demo.exception.UsuariosServiceErrorAdvice;
 import cl.globallogic.demo.exception.UsuariosServiceException;
 import cl.globallogic.demo.exception.UsuariosValidationException;
@@ -30,7 +31,7 @@ public class UsersController {
         try {
             user = Usuarios.crearUsuario(request);
         }catch (UsuariosServiceException exc){
-            throw  new UsuariosServiceException("Correo ya utilizado:" + mail);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }catch (UsuariosValidationException exc){
             return new ResponseEntity<>(null, null, HttpStatus.BAD_REQUEST);
         }
