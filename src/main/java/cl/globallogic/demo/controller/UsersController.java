@@ -2,6 +2,7 @@ package cl.globallogic.demo.controller;
 
 import cl.globallogic.demo.exception.UsuariosServiceErrorAdvice;
 import cl.globallogic.demo.exception.UsuariosServiceException;
+import cl.globallogic.demo.exception.UsuariosValidationException;
 import cl.globallogic.demo.model.Usuarios;
 import cl.globallogic.demo.service.UsuariosService;
 import lombok.RequiredArgsConstructor;
@@ -24,12 +25,15 @@ public class UsersController {
 
     @PostMapping("/usuarios")
     public ResponseEntity<Usuarios> createUser(@Valid @RequestBody Usuarios request) {
+        Usuarios user;
         try {
-            Usuarios.crearUsuario(request);
-            return new ResponseEntity<>(request, HttpStatus.OK);
+            user = Usuarios.crearUsuario(request);
         }catch (UsuariosServiceException exc){
             return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }catch (UsuariosValidationException exc){
+            return new ResponseEntity<>(null, null, HttpStatus.BAD_REQUEST);
         }
+        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
 }

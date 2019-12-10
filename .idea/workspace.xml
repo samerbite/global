@@ -4,6 +4,8 @@
     <list default="true" id="56f7e63e-5b52-4142-962d-d361f94d64bd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -44,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+            <state relative-caret-position="226">
+              <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,10 +68,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="256">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,14 +80,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="181">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#982#983#0" expanded="true" />
-                <element signature="e#1036#1037#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,10 +142,10 @@
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosService.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/UsuariosError.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/model/Usuarios.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosNotFound.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceException.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java" />
       </list>
@@ -208,6 +220,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="global" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -421,18 +442,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#137#138#0" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosNotFound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -455,20 +464,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/service/UsuariosServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="20" column="44" lean-forward="true" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        <state relative-caret-position="226">
+          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -485,14 +484,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosValidationException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="90">
+          <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1036#1037#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosServiceErrorAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cl/globallogic/demo/controller/UsersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

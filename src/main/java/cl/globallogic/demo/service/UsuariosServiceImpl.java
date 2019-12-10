@@ -20,7 +20,7 @@ public class UsuariosServiceImpl implements UsuariosService{
             log.info("mensaje es:", request);
             return Repository.save(request);
         }catch (UsuariosServiceException e) {
-            throw new UsuariosServiceException("Correo ya esta registrado");
+            throw new UsuariosServiceException("El correo ya registrado");
         }
     }
 }
