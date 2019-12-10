@@ -23,6 +23,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/dto/UsuariosError.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/cl/globallogic/demo/exception/UsuariosNotFound.java">
           <value>
             <set />

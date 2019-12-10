@@ -25,11 +25,12 @@ public class UsersController {
 
     @PostMapping("/usuarios")
     public ResponseEntity<Usuarios> createUser(@Valid @RequestBody Usuarios request) {
+        String mail = request.getEmail();
         Usuarios user;
         try {
             user = Usuarios.crearUsuario(request);
         }catch (UsuariosServiceException exc){
-            return new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
+            throw  new UsuariosServiceException("Correo ya utilizado:" + mail);
         }catch (UsuariosValidationException exc){
             return new ResponseEntity<>(null, null, HttpStatus.BAD_REQUEST);
         }

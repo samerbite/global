@@ -1,9 +1,6 @@
-package cl.globallogic.demo.model;
+package cl.globallogic.demo.dto;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
-
-@XmlRootElement(name = "error")
 
 public class UsuariosError {
     public UsuariosError(String message, List<String> details) {
