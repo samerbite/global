@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
+import javax.management.BadAttributeValueExpException;
 import javax.validation.Valid;
 
 @RestController
@@ -25,17 +26,18 @@ public class UsersController {
 
 
     @PostMapping("/usuarios")
-    public ResponseEntity<Usuarios> createUser(@Valid @RequestBody Usuarios request) {
+    public ResponseEntity<Usuarios> createUser(@Valid @RequestBody Usuarios request) throws BadAttributeValueExpException {
         String mail = request.getEmail();
         Usuarios user;
+        //user = Usuarios.crearUsuario(request);
         try {
-            user = Usuarios.crearUsuario(request);
+            Usuarios.crearUsuario(request);
+            return new ResponseEntity<>(request, HttpStatus.OK);
         }catch (UsuariosServiceException exc){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }catch (UsuariosValidationException exc){
-            return new ResponseEntity<>(null, null, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
 }

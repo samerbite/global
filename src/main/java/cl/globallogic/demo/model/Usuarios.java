@@ -20,10 +20,9 @@ public class Usuarios {
     private String name;
     @JsonProperty("email")
     @Column(nullable = false, unique = true)
-    @Email(message = "email ya se encuentra registrado")
     private String email;
     @JsonProperty("password")
-    @Pattern(regexp = "^(?=.*[0-9]{2})(?=.*[a-z])(?=.*[A-Z])(?=\\S+$).{8,}$")
+    @Column(nullable = false)
     private String password;
     @JsonProperty("phones")
     @Embedded
