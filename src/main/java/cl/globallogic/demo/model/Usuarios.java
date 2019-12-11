@@ -36,7 +36,7 @@ public class Usuarios {
     private Calendar modificado;
     @JsonProperty("activo")
     private String activo;
-    private long serialVersionUID = -5290198995172316155L;
+    private String serialVersionUID = "";
 
     public Usuarios (){
         super();
@@ -126,10 +126,10 @@ public class Usuarios {
     public void setContrycode(String contrycode) {
         phones.setContrycode(contrycode);
     }
-    public Long getSerialVersionUID () {
+    public String getSerialVersionUID () {
         return serialVersionUID;
     }
-    public void setSerialVersionUID (long serialVersionUID) {
+    public void setSerialVersionUID (String serialVersionUID) {
         this.serialVersionUID=serialVersionUID;
     }
 }

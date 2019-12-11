@@ -1,5 +1,6 @@
 package cl.globallogic.demo.service;
 
+import cl.globallogic.demo.dto.Response;
 import cl.globallogic.demo.exception.UsuariosServiceException;
 import cl.globallogic.demo.model.Usuarios;
 import cl.globallogic.demo.repository.UsuariosRepository;
@@ -21,6 +22,9 @@ public class UsuariosServiceImpl implements UsuariosService{
     @Autowired
     private UsuariosRepository Repository;
 
+    @Autowired
+    private LoginService Token;
+
     @Override
     public ResponseEntity <Usuarios> crearUsuario (Usuarios request) throws BadAttributeValueExpException {
         String mail = request.getEmail();
@@ -39,8 +43,17 @@ public class UsuariosServiceImpl implements UsuariosService{
         if (validPass == false){
             log.info("Error formato password");
         }
-            Usuarios user = Repository.save(request);
-            return new ResponseEntity<>(user, HttpStatus.OK);
+
+        Usuarios user = Repository.save(request);
+        String token = Token.obtenerToken(request.getName());
+        Response response = new Response();
+        response.setId(request.getId());
+        response.setCreacion(request.getCreacion());
+        response.setModificado(request.getModificado());
+        response.setLast_login(request.getCreacion());
+        response.setToken(token);
+        response.setIsactive("ACTIVO");
+            return new ResponseEntity(response, HttpStatus.OK);
     }
 
 
