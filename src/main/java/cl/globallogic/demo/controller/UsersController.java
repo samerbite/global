@@ -1,13 +1,9 @@
 package cl.globallogic.demo.controller;
 
-import cl.globallogic.demo.dto.UsuariosError;
-import cl.globallogic.demo.exception.UsuariosServiceErrorAdvice;
 import cl.globallogic.demo.exception.UsuariosServiceException;
 import cl.globallogic.demo.exception.UsuariosValidationException;
 import cl.globallogic.demo.model.Usuarios;
 import cl.globallogic.demo.service.UsuariosService;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,9 +23,6 @@ public class UsersController {
 
     @PostMapping("/usuarios")
     public ResponseEntity<Usuarios> createUser(@Valid @RequestBody Usuarios request) throws BadAttributeValueExpException {
-        String mail = request.getEmail();
-        Usuarios user;
-        //user = Usuarios.crearUsuario(request);
         try {
             Usuarios.crearUsuario(request);
             return new ResponseEntity<>(request, HttpStatus.OK);

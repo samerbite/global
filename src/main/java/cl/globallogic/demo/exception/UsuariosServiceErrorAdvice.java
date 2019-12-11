@@ -2,7 +2,6 @@ package cl.globallogic.demo.exception;
 
 import cl.globallogic.demo.dto.UsuariosError;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
